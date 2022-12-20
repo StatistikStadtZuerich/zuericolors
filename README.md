@@ -41,22 +41,22 @@ get_zuericolors(palette = "qual6")
 
 [1] "#3431DE" "#DB247D" "#1D942E" "#FBB900" "#23C3F1" "#FF720C"
 
-# Get first color from palette "divntrgry"
-get_zuericolors(palette = "divntrgry", nth = 1)
+# Get first color from palette "div9ntrgry"
+get_zuericolors(palette = "div9ntrgry", nth = 1)
 
 [1] "#EA4F61"
 
-# Get first four colors from palette "contrasting12"
-get_zuericolors("contrasting12", nth = 1:4)
+# Get first four colors from palette "div9ntrgry"
+get_zuericolors("div9ntrgry", nth = 1:4)
 
 [1] "#A30059" "#DB247D" "#FF579E" "#FFA8D0"
 
-# View color palette "harmonic12"
-view_zuericolors("seqblu")
+# View color palette "seq9blu"
+view_zuericolors("seq9blu")
 ```
 
 
-<img src='pictures/seqblu.JPG' />
+<img src='pictures/seq9blu.JPG' />
 
 ## Getting help
 
