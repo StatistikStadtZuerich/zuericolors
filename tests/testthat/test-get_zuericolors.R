@@ -11,8 +11,8 @@ test_that("special dealing with palette name", {
 })
 
 test_that("get specific colors", {
-  expect_equal(get_zuericolors("divvalgry", nth = 11),
-               palettes[["divvalgry"]][[11]])
+  expect_equal(get_zuericolors("div9valgry", nth = 8),
+               palettes[["div9valgry"]][[8]])
   expect_equal(get_zuericolors("qual12br", nth = 7:9),
                palettes[["qual12br"]][7:9])
 })

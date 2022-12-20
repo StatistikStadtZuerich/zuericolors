@@ -12,8 +12,8 @@ test_that("a plot is returned", {
 
 # test 2: special handling of palette name argument
 test_that("deal with palette names correctly", {
-  expect_s3_class(view_zuericolors(harmonic6), c("gg", "ggplot"))
-  expect_s3_class(view_zuericolors(haRmonic6), c("gg", "ggplot"))
+  expect_s3_class(view_zuericolors(qual6), c("gg", "ggplot"))
+  expect_s3_class(view_zuericolors(quAl6), c("gg", "ggplot"))
 })
 
 # test 3: correct colors are returned
