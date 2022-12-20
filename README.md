@@ -36,27 +36,27 @@ packageVersion("zuericolors")
 ```{r, message = FALSE}
 library(zuericolors)
 
-# Get all the colors from palette "hamronic 6"
-get_zuericolors("harmonic6")
+# Get all the colors from palette "qual6"
+get_zuericolors(palette = "qual6")
 
-[1] "#0f05a0" "#2ac7c7" "#0a8df6" "#a2e5b0" "#3d575e" "#23c3f1"
+[1] "#3431DE" "#DB247D" "#1D942E" "#FBB900" "#23C3F1" "#FF720C"
 
-# Get first color from palette "diverging5rotgruen"
-get_zuericolors("diverging5rotgruen", nth = 1)
+# Get first color from palette "divntrgry"
+get_zuericolors(palette = "divntrgry", nth = 1)
 
 [1] "#EA4F61"
 
 # Get first four colors from palette "contrasting12"
 get_zuericolors("contrasting12", nth = 1:4)
 
-[1] "#0f05a0" "#65cd8c" "#960055" "#0098c6"
+[1] "#A30059" "#DB247D" "#FF579E" "#FFA8D0"
 
 # View color palette "harmonic12"
-view_zuericolors("harmonic12")
+view_zuericolors("seqblu")
 ```
 
 
-<img src='pictures/harmonic12.JPG' />
+<img src='pictures/seqblu.JPG' />
 
 ## Getting help
 

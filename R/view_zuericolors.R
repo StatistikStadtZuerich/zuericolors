@@ -12,7 +12,7 @@
 #' @import ggpubr
 #'
 #' @examples \dontrun{
-#' view_zuericolors("harmonic6")
+#' view_zuericolors(palette = "qual12")
 #' }
 view_zuericolors <- function(palette) {
 

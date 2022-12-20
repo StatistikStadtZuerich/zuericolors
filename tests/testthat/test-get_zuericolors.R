@@ -6,21 +6,21 @@ test_that("get entire palette with just palette name", {
 })
 
 test_that("special dealing with palette name", {
-  expect_equal(get_zuericolors("hArmonic6"), palettes[["harmonic6"]])
-  expect_equal(get_zuericolors(harmonic6), palettes[["harmonic6"]])
+  expect_equal(get_zuericolors("qUal6"), palettes[["qual6"]])
+  expect_equal(get_zuericolors(qual6), palettes[["qual6"]])
 })
 
 test_that("get specific colors", {
-  expect_equal(get_zuericolors("contrasting12hell", nth = 11),
-               palettes[["contrasting12hell"]][[11]])
-  expect_equal(get_zuericolors("sequential9petrol", nth = 7:9),
-               palettes[["sequential9petrol"]][7:9])
+  expect_equal(get_zuericolors("divvalgry", nth = 11),
+               palettes[["divvalgry"]][[11]])
+  expect_equal(get_zuericolors("qual12br", nth = 7:9),
+               palettes[["qual12br"]][7:9])
 })
 
 test_that("asking for more colors than exist", {
-  expect_length(get_zuericolors("harmonic6"), 6)
-  expect_error(get_zuericolors("harmonic6", nth = 20), "6 colors")
-  expect_error(get_zuericolors("harmonic6", nth = 5:7), "6 colors")
+  expect_length(get_zuericolors("qual6"), 6)
+  expect_error(get_zuericolors("qual6", nth = 20), "6 colors")
+  expect_error(get_zuericolors("qual6", nth = 5:7), "6 colors")
 })
 
 test_that("error is raised with missing arguments", {
