@@ -20,12 +20,12 @@ Function to access color values of a specific zuericolors palette.
 \examples{
 \dontrun{
 # Get colors of palette "harmonic6"
-get_zuericolors("harmonic6")
+get_zuericolors(palette = "qual12")
 
 # Get third color value of palette "harmonic6"
-get_zuericolors("harmonic6", 3)
+get_zuericolors(palette = "qual12", nth = 3)
 
 # Get first three color values of palette "harmonic6"
-get_zuericolors("harmonic6", 1:3)
+get_zuericolors(palette = "qual12", nth = 1:3)
 }
 }
