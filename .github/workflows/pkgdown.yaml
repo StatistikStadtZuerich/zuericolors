@@ -34,7 +34,9 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
       
-      - uses: r-lib/actions/setup-renv@v2
+      - name: install pkgdown
+        run: install.packages("pkgdown")
+        shell: Rscript {0}
 
       - name: Cache packages
         uses: actions/cache@v4
