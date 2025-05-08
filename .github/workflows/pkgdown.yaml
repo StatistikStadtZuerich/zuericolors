@@ -3,14 +3,14 @@
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+    - "renv/*"
+    - "renv.lock"
   pull_request:
   release:
     types: [published]
   workflow_dispatch:
-  paths-ignore:
-    - "renv/*"
-    - "renv.lock"
-
+  
 name: pkgdown.yaml
 
 permissions: read-all
@@ -40,17 +40,10 @@ jobs:
       - name: install dependency for systemfonts
         run: sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev
       
-      - name: restore renv manually
-        run: renv::restore()
-        shell: Rscript {0}
-
-      - name: Cache packages
-        uses: actions/cache@v4
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-              ${{ runner.os }}-renv-
+          extra-packages: any::pkgdown, local::.
+          needs: website
 
       - name: Build site
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
