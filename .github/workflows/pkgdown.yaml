@@ -7,6 +7,9 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+  paths-ignore:
+    - "renv/*"
+    - "renv.lock"
 
 name: pkgdown.yaml
 
