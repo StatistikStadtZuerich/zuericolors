@@ -34,8 +34,8 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
       
-      - name: install pkgdown
-        run: install.packages("pkgdown")
+      - name: restore renv manually
+        run: renv::restore(exclude = c("ragg", "textshaping", "systemfonts"))
         shell: Rscript {0}
 
       - name: Cache packages
