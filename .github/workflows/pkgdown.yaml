@@ -33,9 +33,12 @@ jobs:
           use-public-rspm: true
 
       - uses: r-lib/actions/setup-pandoc@v2
+
+      - name: install dependency for systemfonts
+        run: apt-get install libfontconfig1-dev
       
       - name: restore renv manually
-        run: renv::restore(exclude = c("ragg", "textshaping", "systemfonts"))
+        run: renv::restore()
         shell: Rscript {0}
 
       - name: Cache packages
