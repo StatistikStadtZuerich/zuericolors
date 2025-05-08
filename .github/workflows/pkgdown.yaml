@@ -37,10 +37,17 @@ jobs:
       - name: install dependency for systemfonts
         run: sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev
       
-      - uses: r-lib/actions/setup-r-dependencies@v2
+      - name: restore renv manually
+        run: renv::restore()
+        shell: Rscript {0}
+
+      - name: Cache packages
+        uses: actions/cache@v4
         with:
-          extra-packages: any::pkgdown, local::.
-          needs: website
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+              ${{ runner.os }}-renv-
 
       - name: Build site
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
