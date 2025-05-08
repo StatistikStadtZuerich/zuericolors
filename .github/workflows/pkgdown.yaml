@@ -35,7 +35,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - name: install dependency for systemfonts
-        run: sudo apt-get install libfontconfig1-dev
+        run: sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev
       
       - name: restore renv manually
         run: renv::restore()
