@@ -46,6 +46,7 @@ jobs:
           if [[ ${{ matrix.config.os }} =~ "ubuntu" ]]; then
             sudo apt-get install libfontconfig1-dev libharfbuzz-dev libfribidi-dev
           fi
+        shell: bash
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
