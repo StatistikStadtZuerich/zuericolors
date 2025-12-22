@@ -9,7 +9,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/StatistikStadtZuerich/zuericolors/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/StatistikStadtZuerich/zuericolors/blob/fix-gh-action/DESCRIPTION)
 
 Feller A (2025). *zuericolors: Statistik Stadt Zuerich Colors
 (zuericolors)*. R package version 1.0.0,
