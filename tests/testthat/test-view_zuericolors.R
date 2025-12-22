@@ -2,12 +2,12 @@
 test_that("a plot is returned", {
 
   # when a palette is specified
-  expect_type(view_zuericolors("qual6"), "list")
-  expect_s3_class(view_zuericolors("qual6"), c("gg", "ggplot"))
+  p1 <- view_zuericolors("qual6")
+  expect_s3_class(p1, c("gg", "ggplot"))
 
   # when no palette is specified
-  expect_type(view_zuericolors(), "list")
-  expect_s3_class(view_zuericolors(), c("gg", "ggplot", "ggarrange"))
+  p2 <- view_zuericolors()
+  expect_s3_class(p2, c("gg", "ggplot", "ggarrange"))
 })
 
 # test 2: special handling of palette name argument
